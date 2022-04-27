@@ -43,7 +43,7 @@ contract AddressBook
 
 
     
-    function add(string memory _name, address _address) internal isValidSender
+    function add(string memory _name, address _address) public isValidSender
     {
         require(bytes(_name).length > 0, "Empty");
         require(_address != address(0), "!Address");
@@ -58,10 +58,10 @@ contract AddressBook
 
 
 
-    function remove(string memory _name) internal isValidSender
+    function remove(string memory _name) public isValidSender
     {
         require(bytes(_name).length > 0, "Empty");
-        require(!exists(_name), "Name Exists");
+        require(exists(_name), "Name !Exists");
 
         address _address = book[msg.sender][_name];
         delete book[msg.sender][_name];
@@ -72,7 +72,7 @@ contract AddressBook
 
 
 
-    function updateAddress(string memory _name, address _address) internal isValidSender
+    function updateAddress(string memory _name, address _address) public isValidSender
     {
         require(bytes(_name).length > 0, "Empty");
         require(_address != address(0), "!Address");
@@ -87,7 +87,7 @@ contract AddressBook
 
 
 
-    function updateName(string memory _name, string memory new_name) internal isValidSender
+    function updateName(string memory _name, string memory new_name) public isValidSender
     {
         require(bytes(_name).length > 0, "Empty");
         require(bytes(new_name).length > 0, "New Name Empty");
@@ -105,7 +105,7 @@ contract AddressBook
 
 
 
-    function getAddress(string memory _name) internal view isValidSender returns(address)
+    function getAddress(string memory _name) public view isValidSender returns(address)
     {
         require(bytes(_name).length > 0, "Empty");
         require(exists(_name), "Name !Exists");
