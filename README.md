@@ -2,13 +2,9 @@
 
 ---
 
-<br/>
-
 Culled from https://cryptomarketpool.com/getting-started-with-solidity/#block-ceb01da9-9848-47a1-8dcf-85f8459b0639.
 
 ##
-
-<br/>
 
 It allows one to save a list of Ethereum account address’s to the blockchain with an alias name. 
 
