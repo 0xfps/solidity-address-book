@@ -2,13 +2,15 @@
 
 ---
 
-The contract below demonstrate a swap of two tokens between two parties at the same time (atomic).
+Culled from https://cryptomarketpool.com/getting-started-with-solidity/#block-ceb01da9-9848-47a1-8dcf-85f8459b0639.
 
-- Alice owns token 1
-- Bob owns token 2
+##
 
-The function in contract below will execute successfully only if it can swap both tokens at the same exact time
-Think about the future possibilities of this type of exchange. This contract eliminates the need of trust between two parties.
+It allows one to save a list of Ethereum account address’s to the blockchain with an alias name. 
+
+<br/>
+
+As a note never save sensitive or private data to the public blockchain. Data stored on the blockchain is public can be read using various tools (e.g. Web3).
 
 ##
 
